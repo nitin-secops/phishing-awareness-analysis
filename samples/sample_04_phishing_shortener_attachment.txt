@@ -1,0 +1,17 @@
+From: "Finance Department" <finance@yourcompany-invoices.com>
+Reply-To: finance@yourcompany-invoices.com
+Subject: Outstanding Invoice - Payment Required
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=yourcompany-invoices.com;
+    dkim=fail;
+    dmarc=fail header.from=yourcompany-invoices.com
+
+Dear Valued Customer,
+
+Your payment failed to process. Please review the attached invoice.pdf.exe and resubmit payment using the secure link below within 24 hours to avoid a late fee.
+
+http://bit.ly/pay-invoice-now
+
+Final notice: further delay may result in service suspension.
+
+Finance Department

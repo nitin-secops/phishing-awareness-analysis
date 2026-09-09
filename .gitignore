@@ -1,0 +1,6 @@
+# Never commit the real .env file - it contains your private API key
+.env
+
+# Python cache files
+__pycache__/
+*.pyc

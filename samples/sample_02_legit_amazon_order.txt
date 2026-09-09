@@ -1,0 +1,18 @@
+From: "Amazon.in" <no-reply@amazon.in>
+Reply-To: no-reply@amazon.in
+Subject: Your order has shipped
+Authentication-Results: mx.google.com;
+    spf=pass smtp.mailfrom=amazon.in;
+    dkim=pass;
+    dmarc=pass header.from=amazon.in
+
+Hi Nitin,
+
+Your recent order (#402-1938275) has shipped and is expected to arrive by Friday.
+
+Track your package here:
+https://www.amazon.in/track/order/4021938275
+
+Thanks for shopping with us.
+
+Amazon Customer Service

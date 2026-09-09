@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set verdict_class = {
+    'Phishing': 'severity-phishing',
+    'Suspicious': 'severity-suspicious',
+    'Likely Legitimate': 'severity-legit'
+}.get(result.final_verdict, 'severity-legit') %}
+
+<section class="case-file">
+    <div class="verdict-banner {{ verdict_class }}">
+        <div>
+            <span class="verdict-label">Verdict</span>
+            <span class="verdict-value">{{ result.final_verdict }}</span>
+        </div>
+        <div class="score-block">
+            <span class="verdict-label">Risk score</span>
+            <span class="verdict-value mono">{{ result.total_score }}</span>
+        </div>
+        <div class="case-id">Case #{{ case_id }}</div>
+    </div>
+
+    <div class="panel">
+        <h2>Header / authentication findings</h2>
+        {% if result.header_findings.header_reasons %}
+        <ul class="findings">
+            {% for reason in result.header_findings.header_reasons %}
+            <li>{{ reason }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty">No header-based red flags found.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel">
+        <h2>Content findings</h2>
+        {% if result.content_findings.reasons %}
+        <ul class="findings">
+            {% for reason in result.content_findings.reasons %}
+            <li>{{ reason }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty">No content-based red flags found.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel">
+        <h2>URL threat intelligence (VirusTotal)</h2>
+        {% if result.url_reputations %}
+        <ul class="findings url-findings">
+            {% for rep in result.url_reputations %}
+            <li>
+                <span class="mono url-text">{{ rep.url }}</span>
+                <span class="tag mode-{{ rep.mode }}">{{ rep.mode }}</span>
+                <span>{{ rep.verdict }}</span>
+                {% if rep.note %}<div class="note">{{ rep.note }}</div>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty">No URLs found in message.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel action-panel">
+        <h2>Recommended action</h2>
+        <p>{{ result.recommended_action }}</p>
+    </div>
+
+    <a href="{{ url_for('index') }}" class="btn-secondary">Analyze another message</a>
+</section>
+{% endblock %}

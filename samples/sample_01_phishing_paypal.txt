@@ -1,0 +1,19 @@
+From: "PayPal Security" <security@paypa1-alerts.com>
+Reply-To: recovery@totally-different-domain.ru
+Subject: Urgent: Your Account Has Been Limited
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=paypa1-alerts.com;
+    dkim=none;
+    dmarc=fail (p=REJECT) header.from=paypa1-alerts.com
+
+Dear Customer,
+
+We have detected unusual activity on your account. Your account will be suspended in 24 hours unless you verify your identity immediately.
+
+Please click the link below to confirm your account details:
+
+http://paypa1.com/verify-account
+
+Failure to comply will result in permanent account closure.
+
+PayPal Security Team

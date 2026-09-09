@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="queue">
+    <h1>Sample queue</h1>
+    <p class="queue-sub">{{ rows|length }} messages analyzed. Click any row for the full report.</p>
+
+    <table class="queue-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>File</th>
+                <th>Verdict</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            {% set verdict_class = {
+                'Phishing': 'severity-phishing',
+                'Suspicious': 'severity-suspicious',
+                'Likely Legitimate': 'severity-legit'
+            }.get(row.verdict, 'severity-legit') %}
+            <tr onclick="window.location='{{ url_for('analyze_sample', filename=row.filename) }}'">
+                <td><span class="severity-dot {{ verdict_class }}"></span></td>
+                <td class="mono">{{ row.filename }}</td>
+                <td>{{ row.verdict }}</td>
+                <td class="mono">{{ row.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

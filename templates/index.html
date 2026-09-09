@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="console">
+    <div class="console-head">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="console-title">new-analysis</span>
+    </div>
+
+    <form action="{{ url_for('analyze') }}" method="post" class="console-body">
+        <label for="raw_email">Paste the raw email (headers and body)</label>
+        <textarea
+            id="raw_email"
+            name="raw_email"
+            rows="16"
+            placeholder="From: &quot;PayPal Security&quot; &lt;security@paypa1-alerts.com&gt;&#10;Reply-To: recovery@totally-different-domain.ru&#10;Subject: Urgent: Your Account Has Been Limited&#10;Authentication-Results: mx.google.com;&#10;    spf=fail smtp.mailfrom=paypa1-alerts.com;&#10;    dkim=none;&#10;    dmarc=fail header.from=paypa1-alerts.com&#10;&#10;Dear Customer, your account will be suspended..."
+            required
+        ></textarea>
+        <button type="submit" class="btn-primary">Analyze message</button>
+    </form>
+</section>
+
+<section class="intro">
+    <h1>Check a message the way a SOC analyst would</h1>
+    <p>
+        This tool inspects three independent layers of evidence: sender
+        authentication headers (SPF, DKIM, DMARC), message content patterns
+        (typosquatting, urgency language, suspicious attachments), and live
+        threat intelligence from VirusTotal.
+    </p>
+    <p>
+        Don't have a sample handy? <a href="{{ url_for('batch') }}">Run the sample queue</a>
+        to see 10 pre-loaded messages analyzed at once.
+    </p>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+From: "Priya Sharma" <priya.sharma@decodelabs.tech>
+Reply-To: priya.sharma@decodelabs.tech
+Subject: Quick question about Project 3
+Authentication-Results: mx.google.com;
+    spf=pass smtp.mailfrom=decodelabs.tech;
+    dkim=pass;
+    dmarc=pass header.from=decodelabs.tech
+
+Hi Nitin,
+
+Just checking in on how Project 3 is going. Let me know if you have any questions about the rubric or need any clarification.
+
+Best,
+Priya

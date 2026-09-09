@@ -1,0 +1,15 @@
+From: "Bank of America Alerts" <alert@bankofamerica-secure-login.com>
+Reply-To: verify@bankofamerica-secure-login.com
+Subject: Immediate Attention: Suspicious Transaction Blocked
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=bankofamerica-secure-login.com;
+    dkim=fail;
+    dmarc=fail header.from=bankofamerica-secure-login.com
+
+Dear Customer,
+
+We have blocked a suspicious transaction on your account. Your account will be locked unless you confirm your identity within 24 hours.
+
+Verify now: http://tinyurl.com/boa-verify-now
+
+Bank of America Security

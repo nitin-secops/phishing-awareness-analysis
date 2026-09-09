@@ -1,0 +1,15 @@
+From: "HR Department" <hr@yourcompany-hr-portal.com>
+Reply-To: hr@yourcompany-hr-portal.com
+Subject: Updated Company Policy - Review Required
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=yourcompany-hr-portal.com;
+    dkim=none;
+    dmarc=fail header.from=yourcompany-hr-portal.com
+
+Dear Employee,
+
+Please review the attached updated policy document immediately: policy_update.doc.exe
+
+This is mandatory for all staff. Failure to acknowledge by end of day may affect your account access.
+
+HR Department

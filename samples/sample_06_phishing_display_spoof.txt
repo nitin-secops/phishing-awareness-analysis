@@ -1,0 +1,18 @@
+From: "Microsoft Account Team" <alerts@secure-ms-verification.net>
+Reply-To: support@secure-ms-verification.net
+Subject: Unusual sign-in activity detected
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=secure-ms-verification.net;
+    dkim=none;
+    dmarc=fail header.from=secure-ms-verification.net
+
+Dear User,
+
+We detected an unauthorized login attempt on your Microsoft account from a new device.
+
+Confirm your identity now to secure your account:
+https://secure-ms-verification.net/login/confirm
+
+If you do not recognize this activity, act now to prevent unauthorized access.
+
+Microsoft Account Team

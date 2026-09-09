@@ -1,0 +1,18 @@
+From: "IT Support" <it-support@company-helpdesk.com>
+Reply-To: it-support@company-helpdesk.com
+Subject: Mandatory Password Reset - Action Required
+Authentication-Results: mx.google.com;
+    spf=fail smtp.mailfrom=company-helpdesk.com;
+    dkim=none;
+    dmarc=fail header.from=company-helpdesk.com
+
+Dear Employee,
+
+Due to a security incident, all employees are required to reset their password immediately.
+
+Reset your password here:
+http://192.168.44.201/reset-password?user=employee
+
+This is a mandatory security requirement. Immediate attention is required.
+
+IT Support Team

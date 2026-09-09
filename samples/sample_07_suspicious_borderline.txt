@@ -1,0 +1,16 @@
+From: "Netflix" <info@netflix-billing-support.com>
+Reply-To: info@netflix-billing-support.com
+Subject: Update your payment details
+Authentication-Results: mx.google.com;
+    spf=neutral smtp.mailfrom=netflix-billing-support.com;
+    dkim=none;
+    dmarc=none
+
+Dear Member,
+
+We were unable to process your last payment. Please update your billing details to continue enjoying Netflix.
+
+https://www.netflix.com/account/billing
+
+Thank you,
+Netflix Support

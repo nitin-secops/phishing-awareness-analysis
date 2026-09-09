@@ -1,0 +1,20 @@
+From: "GitHub" <noreply@github.com>
+Reply-To: noreply@github.com
+Subject: Your weekly digest
+Authentication-Results: mx.google.com;
+    spf=pass smtp.mailfrom=github.com;
+    dkim=pass;
+    dmarc=pass header.from=github.com
+
+Hi Nitin,
+
+Here's what happened in your repositories this week:
+
+- 2 new stars on password-strength-checker
+- 1 new issue opened on Basic-Encryption-and-Decryption
+
+View your dashboard:
+https://github.com/notifications
+
+Happy coding,
+The GitHub Team
